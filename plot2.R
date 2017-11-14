@@ -11,5 +11,7 @@ powerConsumption <- mutate(powerConsumption, Time = ymd_hms(paste(as.character(p
 
 ## Open 'png' graphics device with size 480x480
 png("plot2.png",width = 480, height = 480)
+## Create plot2
 plot(powerConsumption$Time,powerConsumption$Global_active_power, type = 'l', ylab = "Global Active Power (kilowatts)", xlab = "")
+## Close graphics device
 dev.off()

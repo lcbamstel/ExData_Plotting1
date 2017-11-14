@@ -1,6 +1,10 @@
 library(dplyr)
 library(lubridate)
 
+## Set locale to English
+Sys.setlocale("LC_ALL", "English")
+
+
 ## Read the data
 powerConsumption <- read.table("household_power_consumption.txt", na.strings = "?", sep = ";", header = TRUE)
 ## Change the date column to a "Date" class for subsetting
